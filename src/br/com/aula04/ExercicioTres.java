@@ -11,12 +11,14 @@ public class ExercicioTres {
 				
 			Scanner teclado = new Scanner(System.in);
 			System.out.println("## VALORES E O SEU QUADRADO ##");
-			float[] numeros = new float[5];
-	 		float[] quadrados = new float [5];
+			float[] numeros = new float[10];
+	 		float[] quadrados = new float [10];
 			
 	 		for(int i = 0; i < numeros.length; i++) {
 	 			System.out.println("Digite com um valor: ");
 	 			numeros[i] = teclado.nextFloat();
+	 			
+	 			quadrados[i] = numeros[i] * numeros[i];
 	 		}
 			
 	 		

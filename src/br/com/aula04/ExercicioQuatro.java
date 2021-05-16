@@ -3,7 +3,7 @@ package br.com.aula04;
 import java.util.Scanner;
 
 public class ExercicioQuatro {
-	// 4. Faça um programa que leia um vetor de 8 posições 
+		// 4. Faça um programa que leia um vetor de 8 posições 
 		// e, em seguida, leia também dois valores X e Y quaisquer
 		// correspondentes a duas posições no vetor. 
 		// Ao final seu programa deverá escrever a soma dos 
@@ -11,16 +11,18 @@ public class ExercicioQuatro {
 		public static void main(String[] args) {
 			
 			Scanner teclado = new Scanner(System.in);
-			System.out.println("## SOMA POR POSICAO ##");
-			int[] numerosLidos = new int[4];
 			
-			for (int i = 0; i < numerosLidos.length; i++) {
+			System.out.println("## SOMA POR POSICAO ##");
+			
+			int[] numeros = new int[8];
+			
+			for (int i = 0; i < numeros.length; i++) {
 				System.out.println("Entre com um valor: ");
-				numerosLidos[i] = teclado.nextInt();
+				numeros[i] = teclado.nextInt();
 			}
 			
 			int posicaoX = -1;
-			while(posicaoX < 0 || posicaoX >= numerosLidos.length) {
+			while(posicaoX < 0 || posicaoX >= numeros.length) {
 				System.out.println("Digite uma posicao do vetor: ");
 				posicaoX = teclado.nextInt();
 			}
@@ -29,9 +31,9 @@ public class ExercicioQuatro {
 			System.out.println("Digite outra posicao do vetor: ");
 			int posicaoY = teclado.nextInt();
 			
-			int soma = numerosLidos[posicaoX] + numerosLidos[posicaoY];
+			int soma = numeros[posicaoX] + numeros[posicaoY];
 			
-			for (int valor : numerosLidos) {
+			for (int valor : numeros) {
 				System.out.printf("%d ", valor);
 			}
 			
